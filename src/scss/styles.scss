@@ -1,5 +1,44 @@
-$bg-color: red; 
+.jumbotron {
+    position:relative;
+    overflow:hidden;
+  }
+  
+  .jumbotron .container {
+    position:relative;
+    z-index:2;
+    
+    background:rgba(0,0,0,0.2);
+    padding:2rem;
+    border:1px solid rgba(0,0,0,0.1);
+    border-radius:3px;
+  }
+  
+  .jumbotron-background {
+    object-fit:cover;
+    font-family: 'object-fit: cover;';
+    position:absolute;
+    top:0;
+    z-index:1;
+    width:100%;
+    height:auto;
+    opacity:0.5;
+  }
 
-body {
-    background: $bg-color;
-}
+  // .hide {
+  //   display: none;
+  // }
+
+  .nav-dropdown {
+    display: none;
+    background-color: #212529;
+    width:100%;
+    height: auto;
+    padding-top: 56px;
+    
+    p {
+     color: #ffffff;
+   }
+   span{
+     color: #ffffff;
+   }
+  }
