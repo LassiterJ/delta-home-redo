@@ -1,5 +1,22 @@
-$color: black;
+$theme-colors: (
+  "primary": #0074d9,
+  "danger": #ff4136
+);
 
+$body-bg: #11172b;
+$body-color: #212529;
+
+.navbar .navbar-expand-lg .sticky-top .navbar-dark{
+  border-bottom:  0.0625rem solid 40, 47, 67;
+}
+nav{
+  background-color: $body-bg;
+  border-bottom:  0.0625rem solid rgb(40, 47, 67);
+  
+  .nav-link{
+    color:white;
+  }
+}
 .jumbotron {
     position:relative;
     overflow:hidden;
@@ -8,14 +25,13 @@ $color: black;
   .jumbotron .container {
     position:relative;
     z-index:2;
-    
-    background:rgba(0,0,0,0.2);
     padding:2rem;
     border:1px solid rgba(0,0,0,0.1);
     border-radius:3px;
   }
   
   .jumbotron-background {
+    background-color: (0,0,0,0.2);
     object-fit:cover;
     font-family: 'object-fit: cover;';
     position:absolute;
@@ -32,7 +48,6 @@ $color: black;
 
   .nav-dropdown {
     display: none;
-    background-color: #212529;
     width:100%;
     height: auto;
     padding-top: 56px;
@@ -44,3 +59,4 @@ $color: black;
      color: #ffffff;
    }
   }
+  @import "node_modules/bootstrap/scss/bootstrap";

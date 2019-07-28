@@ -20,97 +20,140 @@
   </head>
 
   <body>
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
-      <div class="container">
-        <a class="navbar-brand" href="#">Delta</a>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg sticky-top navbar-dark ">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarToggleExternalContent"
+          aria-controls="navbarToggleExternalContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="container">
+          <a class="navbar-brand collapse" href="#">Delta</a>
+          <div
+            class="collapse navbar-collapse"
+            id="navbarToggleExternalContent"
+          >
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link more-details-btn" href="#">Book</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Check-In</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">My Trips</a>
+              </li>
+              <li class="nav-item">
+                <!-- For When I redo the page without Bootstrap -->
+                <a class="nav-link" href="./assets/css-grid.html">CSS-Grid</a>
+              </li>
+              <li class="nav-item dropdown ml-4-lg">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  Travel Info
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  SkyMiles
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  More
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+         <!-- signup/login -->
+         <div class="d-inline-flex flex-nowrap ml-auto align-items-center mx-md-auto" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-link">Sign Up</button>
+            <form class="form-inline">
+                <button type="button" class="btn btn-secondary">Login</button>
+                <button type="button" class="btn btn-link d-none d-md-inline">
+                  N
+                </button>
+            </form>
+            
+          </div>
+      </nav>
+      <!-- Mobile Only -->
+      <div>
+        <nav class="d-lg-none">
+          <ul class="nav justify-content-center">
             <li class="nav-item">
-              <a class="nav-link more-details-btn" href="#">Book</a>
+              <a class="nav-link" href="#">Book </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Check-In</a>
+              <a class="nav-link" href="#">Check-In </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">My Trips</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./assets/css-grid.html">CSS-Grid</a>
+            <li class="nav-item d-none d-md-block">
+              <a class="nav-link" href="#">Flight Status </a>
             </li>
-            <li class="nav-item dropdown ml-4">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                Travel Info
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Something else here</a>
-              </div>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                SkyMiles
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Something else here</a>
-              </div>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                More
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Something else here</a>
-              </div>
-            </li>
-            <div class="ml-5" role="group" aria-label="Basic example">
-              <button type="button" class="btn btn-secondary">Sign Up</button>
-              <button type="button" class="btn btn-secondary">Login</button>
-              <button type="button" class="btn btn-secondary">
-                Notifications
-              </button>
-            </div>
           </ul>
-        </div>
+        </nav>
       </div>
-    </nav>
+    </div>
+
+    <!-- Content Displayed on Mobile Only -->
+
     <div class="nav-dropdown dropdown container-fluid hide">
-        <div class="row ml-auto">
-          <a class="pr-3" href="#">ATL</a>
-          <span>Swap Icon HERE</span>
-          <a class="pl-3" href="#">DEN</a>
-        </div>
+      <div class="row ml-auto">
+        <a class="pr-3" href="#">ATL</a>
+        <span>Swap Icon HERE</span>
+        <a class="pl-3" href="#">DEN</a>
+      </div>
     </div>
     <div class="jumbotron jumbotron-fluid bg-dark">
       <div class="jumbotron-background">
@@ -119,12 +162,11 @@
 
       <div class="container text-white">
         <h1 class="display-4">Safe Travels</h1>
-        <p class="lead">
-          
-        </p>
+        <p class="lead"></p>
         <hr class="my-4" />
         <p>
-          Temporary Content for Jonathan Lassiter's rendition of the Delta Homepage
+          Temporary Content for Jonathan Lassiter's rendition of the Delta
+          Homepage
         </p>
         <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
       </div>
@@ -136,8 +178,7 @@
           For IE support of object-fit add this to your document
           &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/object-fit-images/3.2.4/ofi.min.js"&gt;&lt;/script&gt;
           -->
-    
-  
+
     <script src="js/bootstrap/jquery.min.js"></script>
     <script src="js/bootstrap/popper.min.js"></script>
     <script src="js/bootstrap/bootstrap.min.js"></script>
