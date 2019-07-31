@@ -1,6 +1,7 @@
 const gulp = require("gulp");
 const browserSync = require("browser-sync").create();
 const sass = require("gulp-sass");
+const bootlint = require("gulp-bootlint");
 
 // Compile bootstrap sass into CSS & auto-inject into browsers GULP 4
 // *************  NEED TO REFACTOR TO COMBINE STYLES TO SAME FUNCTION**********
@@ -23,14 +24,27 @@ const sass = require("gulp-sass");
 //               .pipe(browserSync.stream())
 //           );
 //     }};
+
+function blint() {
+  return gulp.src("src/index.html").pipe(
+    bootlint({
+      stoponerror: true,
+      stoponwarning: true,
+      loglevel: "debug",
+      disabledIds: [],
+      issues:[],
+  
+    })
+  );
+}
+
 function styleB() {
   // 1. Find scss file
   return (
     gulp
-      .src([
-        "node_modules/bootstrap/scss/bootstrap.scss",
+      .src(
         "src/scss/bootstrap/**/*.scss"
-       ])
+      )
       // 2. Pass file through sass compiler
       .pipe(sass().on("error", sass.logError))
       // 3. Where do I save the compiled css?
@@ -68,11 +82,9 @@ function jsB() {
     .pipe(browserSync.stream());
 }
 
-function jsG(){
-    return gulp
-    .src(
-        "node_modules/jquery/dist/jquery.js"
-    )
+function jsG() {
+  return gulp
+    .src("node_modules/jquery/dist/jquery.js")
     .pipe(gulp.dest("src/js/cssGrid"))
     .pipe(browserSync.stream());
 }
@@ -86,10 +98,10 @@ function watch() {
   });
 
   gulp.watch(
-    [
-      "node_modules/bootstrap/scss/bootstrap.scss",
+    
+      
       "src/scss/bootstrap/**/*.scss"
-    ],
+    ,
     styleB
   );
   gulp.watch("src/scss/css-grid/**/*.scss", styleG);
@@ -106,15 +118,13 @@ function watch() {
       jsB
     )
     .on("change", browserSync.reload);
-  gulp
-    .watch(["/js/cssGrid/*.js"],jsG)
-    .on("change", browserSync.reload);
+  gulp.watch(["/js/cssGrid/*.js"], jsG).on("change", browserSync.reload);
 }
 
 // Combine all tasks and run
 function run() {
-  return gulp.series(jsB, jsG, gulp.parallel(styleB, styleG, watch));
-};
+  return gulp.series(blint, jsB, jsG, gulp.parallel(styleB, styleG, watch));
+}
 
 const build = run();
 exports.build = build;
