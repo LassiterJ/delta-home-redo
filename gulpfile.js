@@ -31,7 +31,7 @@ function blint() {
       stoponerror: true,
       stoponwarning: true,
       loglevel: "debug",
-      disabledIds: [],
+      disabledIds: ['E013'],
       issues:[],
   
     })

@@ -1,48 +1,40 @@
+// Theme Variables & Setup
+
 $theme-colors: (
   "primary": #0074d9,
   "danger": #ff4136
 );
 
-$body-bg: #11172b;
+$body-bg: #fff;
 $body-color: #212529;
 $card-border-width: none;
 $card-border-radius: none;
+
+
+.bg-delta-blue {   // Secondary Backup Color
+  background: #11172b;
+}
+
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+
+// Elements
+html {
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
 
 body {
   line-height: 1.5;
   font-size: 1rem;
   font-weight: 400;
 }
-.fa-bell{
-  color:white;
-}
-nav {
-  background-color: $body-bg;
-  border-bottom: 0.0625rem solid rgb(40, 47, 67);
-
-  .nav-link {
-    color: white;
-  }
-
-  .btn-danger{
-    font-family: "Lato", sans-serif;
-    text-transform: uppercase;
-  }
-}
-.nav-dropdown {
-  display: none;
-  width: 100%;
-  height: auto;
-  padding-top: 56px;
-
-  p {
-    color: #ffffff;
-  }
-  span {
-    color: #ffffff;
-  }
-}
-
 span > p {
   font-family: "Lato", sans-serif;
   font-size: 2.8125rem;
@@ -51,75 +43,46 @@ span > p {
   letter-spacing: 0.0005em;
 }
 
-.card{
-  border:none;
-}
-.card-text {
+div a {
   color: white;
 }
 
-div.shopping-links-container {
+
+// Navigation Menu
+nav {
   background-color: $body-bg;
-  border-top: 1px solid #3b4154;
-  .shopping-list-wrapper {
-    color: #fff;
-    border-bottom: 1px solid #3b4154;
-  }
-  .shopping2-wrapper{
-    border-bottom: 1px solid #3b4154;
-    padding: .932rem;
-  }
-  li.nav-item {
-    display: inline-block;
-    padding-top: .75rem;
-    padding-bottom: 0.625rem;
-    width:32.5%;
-    
-    
-    i {
-      color: #868e96;
-      padding: .4375rem;
-      margin-right: 0;
+  border-bottom: 0.0625rem solid rgb(40, 47, 67);
 
-}
-    }
-
-    li a.nav-link{
-    display: block;
-    background: none;
-    font-size: .875rem;
-    line-height: .875rem;
-    color: #fff;
-    padding:.25rem 0 0;
-
-
-    }
-  }
-
-  .signup-login.hide{
-    display:none;
-  }
-  div a {
+  .nav-link {
     color: white;
+  }
+
+  .btn-danger {
     font-family: "Lato", sans-serif;
+    text-transform: uppercase;
   }
-  .shopping-1 {
-    border-right: 1px solid #3b4154;
+  .fa-bell {
+    color: white;
   }
-  .shopping-2 {
-    border-right: 1px solid #3b4154;
+  .nav-dropdown {
+    display: none;
+    width: 100%;
+    height: auto;
+    padding-top: 56px;
+  
+    p {
+      color: #ffffff;
+    }
+    span {
+      color: #ffffff;
+    }
   }
+  // Hamburger Menu //
 
-.nav-link{
-  text-transform: uppercase;
-  font-size: .875rem;
-}
-// Hamburger Menu //
-
-.navbar-dark button.navbar-toggler{
+  #nav-toggler {
   border-color: transparent;
 }
-.navbar-toggler span{
+.navbar-toggler span {
   background-color: white;
 }
 
@@ -132,14 +95,14 @@ div.shopping-links-container {
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
   transform: rotate(0deg);
-  -webkit-transition: .5s ease-in-out;
-  -moz-transition: .5s ease-in-out;
-  -o-transition: .5s ease-in-out;
-  transition: .5s ease-in-out;
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
   cursor: pointer;
-  }
-  
-  .hamburger span {
+}
+
+.hamburger span {
   display: block;
   position: absolute;
   height: 3px;
@@ -150,11 +113,11 @@ div.shopping-links-container {
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
   transform: rotate(0deg);
-  -webkit-transition: .25s ease-in-out;
-  -moz-transition: .25s ease-in-out;
-  -o-transition: .25s ease-in-out;
-  transition: .25s ease-in-out;
-  }
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
 
 .hamburger span:nth-child(1) {
   top: 0px;
@@ -162,44 +125,200 @@ div.shopping-links-container {
   -moz-transform-origin: left center;
   -o-transform-origin: left center;
   transform-origin: left center;
-  }
-  
-  .hamburger span:nth-child(2) {
+}
+
+.hamburger span:nth-child(2) {
   top: 10px;
   -webkit-transform-origin: left center;
   -moz-transform-origin: left center;
   -o-transform-origin: left center;
   transform-origin: left center;
-  }
-  
-  .hamburger span:nth-child(3) {
+}
+
+.hamburger span:nth-child(3) {
   top: 20px;
   -webkit-transform-origin: left center;
   -moz-transform-origin: left center;
   -o-transform-origin: left center;
   transform-origin: left center;
-  }
-  
-  .hamburger.open span:nth-child(1) {
+}
+
+.hamburger.open span:nth-child(1) {
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -o-transform: rotate(45deg);
   transform: rotate(45deg);
   top: 0px;
   left: 8px;
-  }
-  
-  .hamburger.open span:nth-child(2) {
+}
+
+.hamburger.open span:nth-child(2) {
   width: 0%;
   opacity: 0;
-  }
-  
-  .hamburger.open span:nth-child(3) {
+}
+
+.hamburger.open span:nth-child(3) {
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
   top: 21px;
   left: 8px;
+}
+}
+
+// General Nav
+
+.nav-link {
+  text-transform: uppercase;
+  font-size: 0.875rem;
+}
+
+
+// Section 1: Hero ------------------------------------------------------------
+
+.card {
+  border: none;
+}
+.card-text {
+  color: white;
+}
+
+
+// Shopping Links Container
+div.shopping-links-container {
+  background-color: $body-bg;
+  border-top: 1px solid #3b4154;
+  .shopping-list-wrapper {
+    color: #fff;
+    border-bottom: 1px solid #3b4154;
   }
+  .shopping2-wrapper {
+    border-bottom: 1px solid #3b4154;
+    padding: 0.932rem;
+    font-size: 0.875rem;
+    line-height: 0.875rem;
+  }
+  .shopping-1 {
+    border-right: 1px solid #3b4154;
+  }
+  .shopping-2 {
+    border-right: 1px solid #3b4154;
+  }
+  
+  li.nav-item {
+    display: inline-block;
+    padding-top: 0.75rem;
+    padding-bottom: 0.625rem;
+    width: 32.5%;
+
+    i {
+      color: #868e96;
+      padding: 0.4375rem;
+      margin-right: 0;
+    }
+  }
+
+  li a.nav-link {
+    display: block;
+    background: none;
+    font-size: 0.875rem;
+    line-height: 0.875rem;
+    color: #fff;
+    padding: 0.25rem 0 0;
+  }
+
+  
+}
+
+// Signup/Login Container
+.signup-login {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  button.btn-danger {
+    font-weight: 900;
+    border-radius: 0.05rem;
+    padding: 0.15rem 0.5rem;
+  }
+  .signup-login-hide {
+    display: none;
+  }
+}
+
+
+
+
+
+
+// Section 2: Promo Cards------------------------------------------------------
+.section2 {
+  background: white;
+  color: #0b1f66;
+  .img-card-content-wrapper {
+    padding: 4.375rem 1.875rem 0;
+  }
+
+  .image-container {
+    padding: 0;
+  }
+  .card-img {
+    height: 10.876875rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  #card-img2 {
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    background-image: url(/edited-promo-card2.jpg);
+    height: 19.6875rem;
+    background-position: 80% 0%;
+
+    .card-img2-overlap {
+      padding: 2.4375rem 2.375rem 3.75rem 1.9375rem;
+    }
+  }
+
+  .card-text-wrapper {
+    padding: 1.125rem 1.875rem 0;
+  }
+
+  div.card-content-wrapper2 {
+    background: #10172e;
+    color: white;
+    padding: 1.5rem 1.875rem 1.6875rem;
+  }
+  .card-overlap {
+    width: 38%;
+    margin: 5.813rem 40.69rem 5.813rem 4.625rem;
+    padding: 3.5625rem 1.875rem 3.875rem 3.6875rem;
+    display: block;
+  }
+  .card-content {
+    margin-top: 0.4375rem;
+    font-size: 0.8125rem;
+    line-height: 1.25rem;
+    color: inherit;
+  }
+  .title {
+    font-weight: 900;
+    font-size: 0.8125rem;
+    line-height: 1rem;
+    letter-spacing: revert;
+  }
+
+  div.header h6 {
+    font-size: 0.8125rem;
+    line-height: 1rem;
+    font-weight: 700;
+    color: inherit;
+  }
+
+  h1.display-4 {
+    font-size: 3.25rem;
+    font-weight: 300;
+    letter-spacing: -0.05rem;
+    color: inherit;
+  }
+}
 @import "node_modules/bootstrap/scss/bootstrap";
